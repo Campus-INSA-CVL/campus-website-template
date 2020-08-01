@@ -1,0 +1,110 @@
+@import 'intersection-observer';
+
+.nuxt-content {
+  h1 {
+    &::before {
+      content: '#';
+      margin-right: 0.5rem;
+      color: var(--v-primary-base);
+    }
+  }
+  p {
+    text-align: justify;
+    text-indent: 5rem;
+  }
+  a {
+    font-weight: 500;
+    &:hover {
+      color: var(--v-primary-lighten1);
+    }
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    li {
+      line-height: 2rem;
+      &.task-list-item {
+        &::before {
+          content: none;
+        }
+      }
+    }
+    li::before {
+      content: '#';
+      margin-right: 0.5rem;
+      font-weight: bold;
+      color: var(--v-primary-base);
+    }
+  }
+  // table {
+  //   display: block;
+  //   width: 100%;
+  //   overflow: auto;
+  //   text-align: center;
+  //   border-spacing: 0;
+  //   border-collapse: collapse;
+  //   th {
+  //     font-weight: 600;
+  //   }
+  //   & td,
+  //   & th {
+  //     padding: 6px 13px;
+  //     border: 1px solid #dfe2e5;
+  //   }
+  //   & tr {
+  //     border-top: 1px solid #c6cbd1;
+  //   }
+  // }
+  blockquote {
+    //   margin: 1.5em 10px;
+    //   padding: 1em 10px 0.01em 10px;
+    //   background-color: #f9f9f9;
+    //   color: #212529;
+    //   border-left: 10px solid #cccccc;
+    p {
+      text-indent: 0;
+    }
+    // & > :first-child {
+    //   margin-top: 0;
+    // }
+    // & > :last-child {
+    //   margin-bottom: 0;
+    // }
+  }
+  > hr {
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--v-primary-base);
+    &:after {
+      clear: both;
+    }
+    &:after,
+    &:before {
+      display: table;
+      content: '';
+    }
+  }
+}
+
+.theme--dark {
+  & blockquote {
+    background-color: #0c0c0c;
+    color: #fdfdfd;
+    border-left: 10px solid #383838;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: var(--v-secondary-darken1);
+  max-width: 6px;
+  max-height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--v-secondary-lighten4);
+  border-radius: 6px;
+}
