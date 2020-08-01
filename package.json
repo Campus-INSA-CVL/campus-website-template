@@ -11,6 +11,14 @@
     "lint": "npm run lint:js",
     "lint:fix": "npm run lint:js -- --fix"
   },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@nuxt/content": "^1.5.0",
     "nuxt": "^2.14.0"
@@ -26,6 +34,10 @@
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
-    "pug-plain-loader": "^1.0.0"
+    "pug-plain-loader": "^1.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "@nuxtjs/tailwindcss": "^2.1.0",
+    "@tailwindcss/typography": "^0.2.0"
   }
 }
