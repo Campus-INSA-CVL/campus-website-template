@@ -1,7 +1,19 @@
 ---
-title: base
-description: Ceci est un template très basique de ce qu'il est possible de faire sur le site campus !
-color: primary
+title: team
+description: Ceci est un template dans lequel on ajoute la présentation de l'équipe de l'association de ce qu'il est possible de faire sur le site campus !
+color: secondary
+team:
+  bureau:
+    - responsability: président
+      name: Jules Perrault
+      description: responsable de l'association
+    - responsability: trésorier
+      name: Courtland Vaillancour
+      description: Phasellus et laoreet augue. Aliquam tristique nisi sed velit faucibus auctor. Nulla turpis diam, volutpat nec nisl vitae.
+  communication:
+    - responsability: responsable communication
+      name: Charlotte Beaudoin
+      description: gère son équipe de communication afin d'augmenter la visibilité de l'association
 ---
 
 # Bienvenue dans votre association
@@ -20,10 +32,6 @@ Cras quis justo a sapien accumsan laoreet. Vestibulum justo turpis, tristique eg
 
 Etiam erat metus, dapibus id felis congue, egestas gravida erat. Curabitur sodales eget lectus bibendum lobortis. Nunc dictum est feugiat elit tincidunt, viverra finibus ante ultrices. Vestibulum at sem mollis, pharetra neque sed, tincidunt neque. Proin eget risus quis ante finibus bibendum. Duis a tortor nec augue hendrerit pulvinar eu eget purus. Maecenas nec sapien mollis, commodo mauris at, pulvinar eros. Morbi hendrerit porttitor finibus. Curabitur dapibus sagittis feugiat. Morbi nec sodales tellus. Nam id purus eget libero euismod tincidunt at ut nulla. Quisque finibus orci at pretium tincidunt. Duis in nibh tortor. Pellentesque libero felis, luctus nec nibh ac, vehicula blandit mauris. Quisque placerat vel diam at sodales. Sed purus arcu, scelerisque vel magna vitae, rutrum egestas mi.
 
-<!-- ## Nous retrouver
+## L'équipe
 
-Vous pouvez retrouer votre association préférée sur les réseaux:
-
-- [Facebook](https://www.facebook.com/)
-- [Instagram](https://www.instagram.com/)
-- [Snapchat](https://www.snapchat.com/) -->
+<campus-team :team="team" :color="color"></campus-team>
