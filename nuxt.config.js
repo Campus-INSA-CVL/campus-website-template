@@ -45,7 +45,10 @@ export default {
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
    */
-  components: ['~/components/', { path: '~/components/campus/', prefix: 'c' }],
+  components: [
+    '~/components/',
+    { path: '~/components/campus/', prefix: 'campus' },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
