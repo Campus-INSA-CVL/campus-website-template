@@ -1,6 +1,6 @@
 ---
-title: Ma Super Asso
-description: Sed tempus tellus in neque tincidunt gravida. Integer suscipit sodales nisl, sit amet scelerisque nisi vestibulum ut. Aliquam facilisis purus at ligula mattis faucibus. Curabitur malesuada ipsum ligula, tristique gravida dui ullamcorper id.
+title: base
+description: Ceci est un template très basique de ce qu'il est possible de faire sur le site campus !
 color: primary
 team:
   bureau:
