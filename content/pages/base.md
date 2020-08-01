@@ -1,3 +1,9 @@
+---
+title: Ma Super Asso
+description: Sed tempus tellus in neque tincidunt gravida. Integer suscipit sodales nisl, sit amet scelerisque nisi vestibulum ut. Aliquam facilisis purus at ligula mattis faucibus. Curabitur malesuada ipsum ligula, tristique gravida dui ullamcorper id.
+color: primary
+---
+
 # Bienvenue dans votre association
 
 > Sed tempus tellus in neque tincidunt gravida. Integer suscipit sodales nisl, sit amet scelerisque nisi vestibulum ut. Aliquam facilisis purus at ligula mattis faucibus. Curabitur malesuada ipsum ligula, tristique gravida dui ullamcorper id.
