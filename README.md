@@ -1,20 +1,11 @@
-# campus-website-template
+# Template for the Campus website
 
-## Build Setup
+This repo is used in a [codesandbox](https://codesandbox.io/s/campus-website-template-hyvcs) in order to simplify the process for students to create content for the [campus website](https://github.com/Campus-INSA-CVL/campus-website).
 
-```bash
-# install dependencies
-$ npm install
+This repo provide some pre-build files for the presentation of the association ! So they have just to choose one and adapt the content !
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## 👋 Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Campus-INSA-CVL/campus-website-template/issues)
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Feel free to help us ! Use
+[issues](https://github.com/Campus-INSA-CVL/campus-website-template/issues) and
+[pull requests](https://github.com/Campus-INSA-CVL/campus-website-template/pulls) !
