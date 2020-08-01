@@ -1,8 +1,8 @@
-# Contributing to the Campus website, an association of Campus INSA Centre-Val de Loire
+# Contributing to the template for the association of the Campus website, an association of Campus INSA Centre-Val de Loire
 
-Thank you for contributing to the Campus website, the official website of Campus INSA Centre-Val de Loire! :heart: :tada:
+Thank you for contributing to the template for the association of the Campus website, the official website of Campus INSA Centre-Val de Loire! :heart: :tada:
 
-This repo is where most issues are reported for the server of the Campus website. Campus INSA CVL embraces modularity and is broken up across many repos.
+This repo is where most issues are reported.
 
 ## Report a bug
 
@@ -10,7 +10,7 @@ Before creating an issue please make sure you have checked out the docs. You mig
 
 If you haven't found your answer please feel free to create an issue on Github.
 
-Issues can be reported in the [issue tracker](https://github.com/Campus-INSA-CVL/campus-website/issues).
+Issues can be reported in the [issue tracker](https://github.com/Campus-INSA-CVL/campus-website-template/issues).
 
 ## Report a Security Concern
 
