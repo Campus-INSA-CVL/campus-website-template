@@ -1,7 +1,7 @@
 ---
 title: base
 description: Ceci est un template très basique de ce qu'il est possible de faire sur le site campus !
-color: primary
+color: baseColor
 ---
 
 # Bienvenue dans votre association

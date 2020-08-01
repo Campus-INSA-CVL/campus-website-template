@@ -80,7 +80,7 @@ export default {
     theme: {
       dark: false,
       themes: {
-        dark: {
+        light: {
           baseColor: '#fd9644',
           teamColor: '#fed330',
         },
