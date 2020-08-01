@@ -5,7 +5,12 @@
 </template>
 
 <script>
+import Team from '@/components/campus/team'
+
 export default {
+  components: {
+    CampusTeam: Team,
+  },
   async asyncData({ $content, route }) {
     const content = await $content('pages', route.params.name).fetch()
 

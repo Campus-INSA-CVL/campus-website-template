@@ -2,6 +2,18 @@
 title: Ma Super Asso
 description: Sed tempus tellus in neque tincidunt gravida. Integer suscipit sodales nisl, sit amet scelerisque nisi vestibulum ut. Aliquam facilisis purus at ligula mattis faucibus. Curabitur malesuada ipsum ligula, tristique gravida dui ullamcorper id.
 color: primary
+team:
+  bureau:
+    - responsability: président
+      name: Jules Perrault
+      description: responsable de l'association
+    - responsability: trésorier
+      name: Courtland Vaillancour
+      description: Phasellus et laoreet augue. Aliquam tristique nisi sed velit faucibus auctor. Nulla turpis diam, volutpat nec nisl vitae.
+  communication:
+    - responsability: responsable communication
+      name: Charlotte Beaudoin
+      description: gère son équipe de communication afin d'augmenter la visibilité de l'association
 ---
 
 # Bienvenue dans votre association
@@ -29,3 +41,5 @@ Vous pouvez retrouer votre association préférée sur les réseaux:
 - [Snapchat](https://www.snapchat.com/)
 
 ## L'équipe
+
+<campus-team :team="team" :color="color"></campus-team>
