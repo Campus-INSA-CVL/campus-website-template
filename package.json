@@ -26,18 +26,20 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^2.1.0",
     "@nuxtjs/vuetify": "^1.11.2",
+    "@tailwindcss/typography": "^0.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "@nuxtjs/tailwindcss": "^2.1.0",
-    "@tailwindcss/typography": "^0.2.0"
+    "sass-loader": "^8.0.2"
   }
 }
