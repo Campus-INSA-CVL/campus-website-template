@@ -1,6 +1,6 @@
 <template lang="pug">
   v-row(justify="center", no-gutters)
-    v-col(cols="12", md="8", lg="6")
+    v-col(cols="12", sm="8", md="6", lg="4")
       form-generator(:content="content[0]")
 </template>
 

@@ -13,6 +13,25 @@ form:
       name: color
       label: nom de la couleur de l'association
       value: ""
+    - type: team
+      name: team
+      fields:
+        bureau:
+          - type: text-field
+            responsability: président
+            name: name
+            label: nom du président
+            value: ""
+          - type: text-field
+            responsability: trésorier
+            name: name
+            label: nom du trésorier
+            value: ""
+          - type: text-field
+            responsability: secrétaire
+            name: name
+            label: nom du secrétaire
+            value: ""
   body:
     - type: text-field
       md: "#"
