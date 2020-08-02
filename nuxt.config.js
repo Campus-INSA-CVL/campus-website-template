@@ -12,6 +12,9 @@ export default {
   generate: {
     fallback: true,
   },
+  router: {
+    base: '/campus-website-templates/',
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
