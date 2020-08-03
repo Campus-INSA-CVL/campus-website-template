@@ -7,8 +7,10 @@
           v-card-text.pb-2
             template(v-for="(component, indice) in part")
               v-text-field(v-if="isTextField(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
-              v-textarea(v-if="isTextArea(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
-              team-form(v-if="isTeam(component.type)", v-model="component.fields.bureau", :key="indice")
+              v-textarea(v-else-if="isTextArea(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
+              color-form(v-else-if="isColor(component.type)", :key="indice", @color="updateColor")
+              team-form(v-else-if="isTeam(component.type)", v-model="component.fields.bureau", :key="indice")
+              social-form(v-else-if="isSocial(component.type)", v-model="component.fields", :key="indice").mt-4
     v-row
       v-col(cols="12", align="end")
         v-btn(@click="validate()", depressed, color="primary") valider
@@ -29,6 +31,13 @@ export default {
     return {}
   },
   methods: {
+    updateColor(v) {
+      for (const value of this.content.form['front-matter']) {
+        if (value.name === 'color') {
+          value.value = v
+        }
+      }
+    },
     isTextField(v) {
       return v === 'text-field'
     },
@@ -38,13 +47,27 @@ export default {
     isTeam(v) {
       return v === 'team'
     },
+    isSocial(v) {
+      return v === 'social'
+    },
+    isColor(v) {
+      return v === 'color'
+    },
+    generateSocial(content) {
+      let social = 'social:\n'
+      for (const key in content) {
+        const element = content[key]
+        social += `  ${element.name}: ${element.value}\n`
+      }
+      return social
+    },
     generateTeam(content) {
       let team = 'team:\n  '
       for (const key in content) {
         const elements = content[key]
         team += `${key}:\n`
         for (const element of elements) {
-          team += `    - responsability: ${element.responsability}\n      name: ${element.name}\n      description:\n`
+          team += `    - responsability: ${element.responsability}\n      name: ${element.value}\n      description:\n`
         }
       }
       return team
@@ -55,6 +78,8 @@ export default {
       for (const element of content) {
         if (element.name === 'team') {
           frontMatter += this.generateTeam(element.fields)
+        } else if (element.name === 'social') {
+          frontMatter += this.generateSocial(element.fields)
         } else {
           frontMatter += `${element.name}: ${element.value}\n`
         }

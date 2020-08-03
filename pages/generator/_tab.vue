@@ -17,9 +17,19 @@ export default {
       .where({ extension: '.yaml', title: tab })
       .fetch()
 
-    console.log('content:', content)
     return {
       content,
+    }
+  },
+  computed: {
+    route() {
+      return this.$route
+    },
+  },
+  head() {
+    return {
+      title:
+        this.$route?.params?.tab?.toUpperCase() + ' generator'.toUpperCase(),
     }
   },
 }

@@ -1,20 +1,15 @@
 ---
-title: team
-description: Ceci est un template dans lequel on ajoute la présentation de l'équipe de l'association pour montrer ce qu'il est possible de faire !
-color: teamColor
-order: 2
-team:
-  bureau:
-    - responsability: président
-      name: Jules Perrault
-      description: responsable de l'association
-    - responsability: trésorier
-      name: Courtland Vaillancour
-      description: Phasellus et laoreet augue. Aliquam tristique nisi sed velit faucibus auctor. Nulla turpis diam, volutpat nec nisl vitae.
-  communication:
-    - responsability: responsable communication
-      name: Charlotte Beaudoin
-      description: gère son équipe de communication afin d'augmenter la visibilité de l'association
+title: social
+description: Ceci est un template pour montrer l'intégration d'une bannière de réseaux sociaux !
+color: socialColor
+order: 3
+social:
+  facebook: 'https://facebook.com'
+  instagram: 'https://instagram.com'
+  twitter: 'https://twitter.com'
+  twitch: 'https://twitch.com'
+  snapchat: 'https://snapchat.com'
+  # discord: 'https://discord.com'
 ---
 
 # Bienvenue dans votre association
@@ -35,6 +30,6 @@ Etiam erat metus, dapibus id felis congue, egestas gravida erat. Curabitur sodal
 
 ---
 
-## L'équipe
+## Nous retrouver sur les réseaux sociaux
 
-<campus-team :team="team" :color="color"></campus-team>
+<campus-social :social="social" :color="color"></campus-social>

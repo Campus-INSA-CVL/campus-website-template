@@ -1,5 +1,5 @@
-title: team
-order: 2
+title: social-team
+order: 4
 form:
   front-matter:
     - type: text-field
@@ -14,6 +14,33 @@ form:
       name: color
       label: nom de la couleur de l'association
       value: ""
+    - type: social
+      name: social
+      fields:
+        - type: text-field
+          name: facebook
+          label: lien vers facebook
+          value: ""
+        - type: text-field
+          name: instagram
+          label: lien vers instagram
+          value: ""
+        - type: text-field
+          name: twitter
+          label: lien vers twitter
+          value: ""
+        - type: text-field
+          name: twitch
+          label: lien vers twitch
+          value: ""
+        - type: text-field
+          name: snapchat
+          label: lien vers snapchat
+          value: ""
+        - type: text-field
+          name: discord
+          label: lien vers discord
+          value: ""
     - type: team
       name: team
       fields:
@@ -67,6 +94,15 @@ form:
       name: texte de de description des objectifs
       label: présentation des objectifs de l'association
       value: ""
+    - type: divider
+      value: "---"
+    - type: text-field
+      md: "##"
+      name: réseaux sociaux
+      label: titre pour les réseaux sociaux
+      value: ""
+    - type: component
+      value: <campus-social :social="social" :color="color"></campus-social>
     - type: divider
       value: "---"
     - type: text-field

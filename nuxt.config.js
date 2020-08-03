@@ -13,7 +13,8 @@ export default {
     fallback: true,
   },
   router: {
-    base: '/campus-website-templates/',
+    base:
+      process.env.NODE_ENV === 'production' ? '/campus-website-templates/' : '',
   },
   /*
    ** Headers of the page
@@ -31,7 +32,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          "Ce site permet aux associations de facilement générer le contenu pour leur page d'association du site campus de l'INSA Centre-Val de Loire",
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -84,11 +86,16 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      options: {
+        customProperties: true,
+      },
       dark: false,
       themes: {
         light: {
           baseColor: '#fd9644',
           teamColor: '#fed330',
+          socialColor: '#26de81',
+          socialTeamColor: '#2bcbba',
         },
       },
     },

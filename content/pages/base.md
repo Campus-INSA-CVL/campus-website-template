@@ -2,6 +2,7 @@
 title: base
 description: Ceci est un template très basique de ce qu'il est possible de faire sur le site campus !
 color: baseColor
+order: 1
 ---
 
 # Bienvenue dans votre association
@@ -19,11 +20,3 @@ Nulla in auctor ante. _Aenean pellentesque aliquam mattis_. Mauris fermentum ris
 Cras quis justo a sapien accumsan laoreet. Vestibulum justo turpis, tristique eget sollicitudin eget, vestibulum vel dolor. Donec dictum vulputate ex non sagittis. Nullam vehicula in quam nec elementum. Nam nec blandit lorem, at dictum felis. Nulla luctus ipsum leo, vitae facilisis est dictum vel. Phasellus tristique urna arcu, quis condimentum mauris interdum non. Praesent tempor lobortis odio et **molestie**. Ut tempor sapien a tortor **luctus**, **blandit** porta felis vehicula. Quisque tempus venenatis orci, ut volutpat urna. Vivamus risus velit, auctor mollis dui ut, lacinia venenatis risus. Suspendisse imperdiet quis lectus id accumsan.
 
 Etiam erat metus, dapibus id felis congue, egestas gravida erat. Curabitur sodales eget lectus bibendum lobortis. Nunc dictum est feugiat elit tincidunt, viverra finibus ante ultrices. Vestibulum at sem mollis, pharetra neque sed, tincidunt neque. Proin eget risus quis ante finibus bibendum. Duis a tortor nec augue hendrerit pulvinar eu eget purus. Maecenas nec sapien mollis, commodo mauris at, pulvinar eros. Morbi hendrerit porttitor finibus. Curabitur dapibus sagittis feugiat. Morbi nec sodales tellus. Nam id purus eget libero euismod tincidunt at ut nulla. Quisque finibus orci at pretium tincidunt. Duis in nibh tortor. Pellentesque libero felis, luctus nec nibh ac, vehicula blandit mauris. Quisque placerat vel diam at sodales. Sed purus arcu, scelerisque vel magna vitae, rutrum egestas mi.
-
-<!-- ## Nous retrouver
-
-Vous pouvez retrouer votre association préférée sur les réseaux:
-
-- [Facebook](https://www.facebook.com/)
-- [Instagram](https://www.instagram.com/)
-- [Snapchat](https://www.snapchat.com/) -->

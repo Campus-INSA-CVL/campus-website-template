@@ -17,11 +17,6 @@ export default {
       default: () => {},
     },
   },
-  computed: {
-    path() {
-      return this.content.path
-    },
-  },
   mounted() {
     const cards = document.getElementsByClassName('v-card')
     for (let index = 0; index < cards.length; index++) {

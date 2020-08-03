@@ -1,0 +1,21 @@
+@mixin content-color($color-css) {
+  h1 {
+    &::before {
+      color: var($color-css + 'base');
+    }
+  }
+  ul {
+    li::before {
+      color: var($color-css + 'base');
+    }
+  }
+  a {
+    color: var($color-css + 'base');
+    &:hover {
+      color: var($color-css + 'lighten1');
+    }
+  }
+  hr {
+    background-color: var($color-css + 'base');
+  }
+}
