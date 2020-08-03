@@ -1,5 +1,7 @@
 # Template for the Campus website
 
+![Templates](https://github.com/Campus-INSA-CVL/campus-website-templates/workflows/Templates/badge.svg)
+
 This repo is used in a [codesandbox](https://codesandbox.io/s/campus-website-template-hyvcs) in order to simplify the process for students to create content for the [campus website](https://github.com/Campus-INSA-CVL/campus-website).
 
 This repo provide some pre-build files for the presentation of the association ! So they have just to choose one and adapt the content !
