@@ -13,12 +13,11 @@
 export default {
   middleware({ redirect, route }) {
     if (route.fullPath.match(/^\/generator\/?$/)) {
-      redirect('/generator/simple')
+      redirect('/generator/base')
     }
   },
   async asyncData({ $content }) {
     const tabs = await $content('pages').where({ extension: '.yaml' }).fetch()
-    console.log('tabs:', tabs)
 
     return {
       tabs,

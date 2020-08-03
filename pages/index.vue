@@ -8,9 +8,8 @@
     v-row(tag="section", no-gutters)
       v-col(cols="12", md="10", lg="8", offset-md="1", offset-lg="2")
         v-row(justify="center")
-          v-col(cols="12", sm="6", lg="6", v-for="layout in content", :key="layout.path")
-            router-link(:to="layout.path")
-              campus-card(:content="layout")
+          v-col(cols="12", sm="6", lg="6", v-for="(layout, index) in content", :key="index")
+            campus-card(:content="layout")
     h2.text-h5.green--text.font-weight-bold Débutant
     v-row(justify="center")
       v-col(cols="12", sm="10", md="8", lg="6")
