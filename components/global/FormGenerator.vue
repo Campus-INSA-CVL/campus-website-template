@@ -67,7 +67,7 @@ export default {
         const elements = content[key]
         team += `${key}:\n`
         for (const element of elements) {
-          team += `    - responsability: ${element.responsability}\n      name: ${element.name}\n      description:\n`
+          team += `    - responsability: ${element.responsability}\n      name: ${element.value}\n      description:\n`
         }
       }
       return team
