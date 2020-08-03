@@ -1,5 +1,5 @@
-title: team
-order: 1
+title: social
+order: 3
 form:
   front-matter:
     - type: text-field
@@ -14,30 +14,33 @@ form:
       name: color
       label: nom de la couleur de l'association
       value: ""
-    - type: team
-      name: team
+    - type: social
+      name: social
       fields:
-        bureau:
-          - type: text-field
-            responsability: président
-            name: name
-            label: nom du président
-            value: ""
-          - type: text-field
-            responsability: vice-président
-            name: name
-            label: nom du vice-président
-            value: ""
-          - type: text-field
-            responsability: trésorier
-            name: name
-            label: nom du trésorier
-            value: ""
-          - type: text-field
-            responsability: secrétaire
-            name: name
-            label: nom du secrétaire
-            value: ""
+        - type: text-field
+          name: facebook
+          label: lien vers facebook
+          value: ""
+        - type: text-field
+          name: instagram
+          label: lien vers instagram
+          value: ""
+        - type: text-field
+          name: twitter
+          label: lien vers twitter
+          value: ""
+        - type: text-field
+          name: twitch
+          label: lien vers twitch
+          value: ""
+        - type: text-field
+          name: snapchat
+          label: lien vers snapchat
+          value: ""
+        - type: text-field
+          name: discord
+          label: lien vers discord
+          value: ""
   body:
     - type: text-field
       md: "#"
@@ -71,8 +74,8 @@ form:
       value: "---"
     - type: text-field
       md: "##"
-      name: équipe
-      label: titre pour l'équipe
+      name: réseaux sociaux
+      label: titre pour les réseaux sociaux
       value: ""
     - type: component
-      value: <campus-team :team="team" :color="color"></campus-team>
+      value: <campus-social :social="social" :color="color"></campus-social>

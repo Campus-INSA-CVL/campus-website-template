@@ -17,7 +17,10 @@ export default {
     }
   },
   async asyncData({ $content }) {
-    const tabs = await $content('pages').where({ extension: '.yaml' }).fetch()
+    const tabs = await $content('pages')
+      .where({ extension: '.yaml' })
+      .sortBy('order')
+      .fetch()
 
     return {
       tabs,
