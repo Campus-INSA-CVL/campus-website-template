@@ -23,6 +23,11 @@ form:
             label: nom du président
             value: ""
           - type: text-field
+            responsability: vice-président
+            name: name
+            label: nom du vice-président
+            value: ""
+          - type: text-field
             responsability: trésorier
             name: name
             label: nom du trésorier
