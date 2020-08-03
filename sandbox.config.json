@@ -1,7 +1,0 @@
-{
-  "infiniteLoopProtection": true,
-  "hardReloadOnChange": false,
-  "view": "browser",
-  "startScript": "sandbox",
-  "port": 3000
-}
