@@ -13,7 +13,8 @@ export default {
     fallback: true,
   },
   router: {
-    base: '/campus-website-templates/',
+    base:
+      process.env.NODE_ENV === 'production' ? '/campus-website-templates/' : '',
   },
   /*
    ** Headers of the page
