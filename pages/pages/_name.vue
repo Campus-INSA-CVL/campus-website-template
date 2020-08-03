@@ -21,5 +21,11 @@ export default {
       content,
     }
   },
+  head() {
+    return {
+      title:
+        this.content[0]?.title?.toUpperCase() ?? 'chargement...'.toUpperCase(),
+    }
+  },
 }
 </script>
