@@ -86,11 +86,16 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      options: {
+        customProperties: true,
+      },
       dark: false,
       themes: {
         light: {
           baseColor: '#fd9644',
           teamColor: '#fed330',
+          socialColor: '#26de81',
+          socialTeamColor: '#2bcbba',
         },
       },
     },

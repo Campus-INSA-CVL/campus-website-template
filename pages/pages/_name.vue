@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row(tag="section", no-gutters)
     v-col(cols="12", md="10", lg="8", offset-md="1", offset-lg="2")
-      nuxt-content(:document="content[0]", class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto")
+      nuxt-content(:document="content[0]", class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto", :id="content[0].color",)
 </template>
 
 <script>

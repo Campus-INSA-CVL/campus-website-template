@@ -1,0 +1,9 @@
+@import 'mixins/colors';
+$template: 'baseColor' --v-baseColor-, 'teamColor' --v-teamColor-,
+  'socialColor' --v-socialColor-, 'socialTeamColor' --v-socialTeamColor-;
+
+@each $name, $color in $template {
+  ##{$name}.nuxt-content {
+    @include content-color($color);
+  }
+}

@@ -2,6 +2,7 @@
 title: team
 description: Ceci est un template dans lequel on ajoute la présentation de l'équipe de l'association pour montrer ce qu'il est possible de faire !
 color: teamColor
+order: 2
 team:
   bureau:
     - responsability: président

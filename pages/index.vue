@@ -38,6 +38,7 @@ export default {
     const content = await $content('pages')
       .only(['title', 'description', 'color', 'slug'])
       .where({ extension: '.md' })
+      .sortBy('order')
       .fetch()
     return {
       content,
