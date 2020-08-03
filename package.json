@@ -21,6 +21,7 @@
     }
   },
   "dependencies": {
+    "@mdi/js": "^5.4.55",
     "@nuxt/content": "^1.5.3",
     "file-saver": "^2.0.2",
     "nuxt": "^2.14.0"

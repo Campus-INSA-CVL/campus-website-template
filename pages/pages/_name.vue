@@ -6,10 +6,12 @@
 
 <script>
 import Team from '@/components/campus/team'
+import Social from '@/components/campus/social'
 
 export default {
   components: {
     CampusTeam: Team,
+    CampusSocial: Social,
   },
   async asyncData({ $content, route }) {
     const name = route.params.name

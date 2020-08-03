@@ -9,6 +9,7 @@
               v-text-field(v-if="isTextField(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
               v-textarea(v-if="isTextArea(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
               team-form(v-if="isTeam(component.type)", v-model="component.fields.bureau", :key="indice")
+              color-form(v-if="isColor(component.type)", :key="indice", @color="updateColor")
     v-row
       v-col(cols="12", align="end")
         v-btn(@click="validate()", depressed, color="primary") valider
@@ -29,6 +30,13 @@ export default {
     return {}
   },
   methods: {
+    updateColor(v) {
+      for (const value of this.content.form['front-matter']) {
+        if (value.name === 'color') {
+          value.value = v
+        }
+      }
+    },
     isTextField(v) {
       return v === 'text-field'
     },
@@ -37,6 +45,9 @@ export default {
     },
     isTeam(v) {
       return v === 'team'
+    },
+    isColor(v) {
+      return v === 'color'
     },
     generateTeam(content) {
       let team = 'team:\n  '
