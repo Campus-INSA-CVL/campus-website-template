@@ -21,6 +21,7 @@ export default {
       .where({ extension: '.yaml' })
       .sortBy('order')
       .fetch()
+    console.log('tabs:', tabs)
 
     return {
       tabs,

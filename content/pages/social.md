@@ -30,6 +30,6 @@ Etiam erat metus, dapibus id felis congue, egestas gravida erat. Curabitur sodal
 
 ---
 
-# Nous retrouver sur les réseaux sociaux
+## Nous retrouver sur les réseaux sociaux
 
 <campus-social :social="social" :color="color"></campus-social>
