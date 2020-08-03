@@ -1,6 +1,6 @@
 <template lang="pug">
   v-hover(v-slot:default="{ hover }")
-    v-card(:to="path", nuxt, :elevation="hover ? 4 : 0", v-intersect.once="{ handler: onIntersect, options: { threshold: 0.4 } }")
+    v-card(:to="`/pages/${content.slug}`", nuxt, exact, :elevation="hover ? 4 : 0", v-intersect.once="{ handler: onIntersect, options: { threshold: 0.4 } }")
       v-card-title(:class="`${content.color}--text`").font-weight-bold.text-uppercase {{ content.title }}
       v-card-text {{ content.description }}
       v-card-actions

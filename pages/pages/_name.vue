@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row(tag="section", no-gutters)
     v-col(cols="12", md="10", lg="8", offset-md="1", offset-lg="2")
-      nuxt-content(:document="content", class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto")
+      nuxt-content(:document="content[0]", class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto")
 </template>
 
 <script>
@@ -12,7 +12,10 @@ export default {
     CampusTeam: Team,
   },
   async asyncData({ $content, route }) {
-    const content = await $content('pages', route.params.name).fetch()
+    const name = route.params.name
+    const content = await $content('pages')
+      .where({ extension: '.md', slug: name })
+      .fetch()
 
     return {
       content,

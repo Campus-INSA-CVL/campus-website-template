@@ -1,4 +1,4 @@
-title: simple
+title: base
 form:
   front-matter:
     - type: text-field
