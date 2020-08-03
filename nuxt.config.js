@@ -32,7 +32,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          "Ce site permet aux associations de facilement générer le contenu pour leur page d'association du site campus de l'INSA Centre-Val de Loire",
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
