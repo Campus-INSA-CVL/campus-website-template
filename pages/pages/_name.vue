@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import Team from '@/components/campus/team'
-import Social from '@/components/campus/social'
+import Team from '@/components/campus/Team'
+import Social from '@/components/campus/Social'
 
 export default {
   components: {
