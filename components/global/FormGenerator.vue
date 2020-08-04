@@ -2,9 +2,9 @@
   v-form(ref="form", v-if="content")
     v-row(tag="section")
       v-col(cols="12")
-        v-card
+        v-card(outlined)
           v-card-text
-            pole-form
+            pole-form(@pole="addPole")
       v-col(v-for="(part, key) in content.form", :key="key", cols="12")
         v-card(outlined)
           v-card-title.text-uppercase.primary--text {{ key }}
@@ -18,7 +18,7 @@
               image-form(v-else-if="is('image', component.type)", :key="indice", :label="component.label", :fileName="component.fileName", @image="addImage").mt-4
     v-row
       v-col(cols="12", align="end")
-        v-btn(@click="validate()", depressed, color="primary") valider
+        v-btn(@click="validate()", depressed, color="primary", :disabled="loading") valider
 </template>
 
 <script>
@@ -36,6 +36,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       images: [],
       pole: '',
     }
@@ -50,6 +51,9 @@ export default {
     },
     addImage(v) {
       this.images.push(v)
+    },
+    addPole(v) {
+      this.pole = v
     },
     is(name, value) {
       return value === name
@@ -124,7 +128,11 @@ export default {
 
       this.generateImage(zip)
 
-      zip.generateAsync({ type: 'blob' }).then(function (content) {
+      this.loading = true
+      this.$nuxt.$loading.start()
+      zip.generateAsync({ type: 'blob' }).then((content) => {
+        this.loading = false
+        this.$nuxt.$loading.finish()
         FileSaver.saveAs(content, 'campus-insa.zip')
       })
     },

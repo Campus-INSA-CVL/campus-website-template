@@ -1,6 +1,5 @@
 <template lang="pug">
-section
-  v-select(label="Choisir son pôle", :items="colors", :menu-props="{bottom: true, offsetY: true}", hide-details, outlined, dense, color="primary", item-color="primary", v-model="color")
+  v-select(label="Choisir son pôle pour la couleur", :items="colors", :menu-props="{bottom: true, offsetY: true}", hide-details, outlined, dense, color="primary", item-color="primary", v-model="color")
 </template>
 
 <script>
@@ -10,6 +9,14 @@ export default {
     return {
       value: '',
       colors: [
+        {
+          text: 'INSAPP',
+          value: 'primary',
+        },
+        {
+          text: 'AIEP',
+          value: 'primary',
+        },
         {
           text: 'Élus',
           value: 'elusColor',
