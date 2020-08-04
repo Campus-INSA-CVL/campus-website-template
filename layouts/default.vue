@@ -8,6 +8,12 @@
         nuxt
 </template>
 
+<script>
+export default {
+  name: 'Default',
+}
+</script>
+
 <style>
 .header-btn::before {
   background-color: transparent !important;
