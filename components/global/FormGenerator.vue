@@ -13,7 +13,7 @@
               v-text-field(v-if="is('text-field', component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
               v-textarea(v-else-if="is('text-area', component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
               color-form(v-else-if="is('color', component.type)", :key="indice", @color="addColor")
-              team-form(v-else-if="is('team', component.type)", v-model="component.fields.bureau", :key="indice")
+              team-form(v-else-if="is('team', component.type)", v-model="component.fields.bureau", :key="indice").mt-4
               social-form(v-else-if="is('social', component.type)", v-model="component.fields", :key="indice").mt-4
               image-form(v-else-if="is('image', component.type)", :key="indice", :label="component.label", :fileName="component.fileName", @image="addImage").mt-4
     v-row
