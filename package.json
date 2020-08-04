@@ -23,7 +23,9 @@
   "dependencies": {
     "@mdi/js": "^5.4.55",
     "@nuxt/content": "^1.5.3",
+    "base64toblob": "0.0.2",
     "file-saver": "^2.0.2",
+    "jszip": "^3.5.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
