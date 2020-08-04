@@ -4,7 +4,11 @@
       v-col(cols="12")
         v-card(outlined)
           v-card-text
-            pole-form(@pole="addPole")
+            v-row
+              v-col(cols="12")
+                pole-form(@pole="addPole")
+              v-col(cols="12")
+                assos-form(@asso="addAsso")
       v-col(v-for="(part, key) in content.form", :key="key", cols="12")
         v-card(outlined)
           v-card-title.text-uppercase.primary--text {{ key }}
@@ -39,6 +43,7 @@ export default {
       loading: false,
       images: [],
       pole: '',
+      asso: '',
     }
   },
   methods: {
@@ -60,12 +65,19 @@ export default {
     addPole(v) {
       this.pole = v
     },
+    addAsso(v) {
+      this.asso = v
+    },
     is(name, value) {
       return value === name
     },
     generateImage(zip) {
       for (const image of this.images) {
-        const path = this.pole ? `assets/${this.pole}` : 'assets'
+        const path = this.pole
+          ? this.asso
+            ? `assets/${this.pole}/${this.asso}`
+            : `assets/${this.pole}`
+          : 'assets'
         zip.file(
           `${path}/${image.fileName}.jpeg`,
           base64toblob(image.base64.split(',')[1], 'image/jpeg')
@@ -110,9 +122,11 @@ export default {
       let body = ''
       for (const element of content) {
         if (element.type === 'image' && element.value) {
-          body += `<campus-center>
-  <campus-image folder-name="federation/bde" name="bde-blois.jpg" max-width="800"></campus-image>
-</campus-center>`
+          body += `<campus-center>\n  <campus-responsive-image folder-name="${
+            this.asso ? this.pole + '/' + this.asso : this.pole
+          }" name="${
+            element.fileName
+          }.jpeg" max-width="800"></campus-responsive-image>\n</campus-center>\n\n`
         } else {
           body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
         }
