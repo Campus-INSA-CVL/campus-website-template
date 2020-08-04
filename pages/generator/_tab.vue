@@ -1,7 +1,8 @@
 <template lang="pug">
   v-row(justify="center", no-gutters)
     v-col(cols="12", sm="8", md="6", lg="4")
-      form-generator(:content="content[0]")
+      dialog-send-mail(:value="dialog", @dialog="toggleDialog")
+      form-generator(:content="content[0]", @finish="toggleDialog")
 </template>
 
 <script>
@@ -21,9 +22,19 @@ export default {
       content,
     }
   },
+  data() {
+    return {
+      dialog: false,
+    }
+  },
   computed: {
     route() {
       return this.$route
+    },
+  },
+  methods: {
+    toggleDialog(v) {
+      this.dialog = v
     },
   },
   head() {

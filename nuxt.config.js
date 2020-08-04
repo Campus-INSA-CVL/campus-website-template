@@ -92,10 +92,12 @@ export default {
       dark: false,
       themes: {
         light: {
-          baseColor: '#fd9644',
-          teamColor: '#fed330',
-          socialColor: '#26de81',
-          socialTeamColor: '#2bcbba',
+          baseColor: '#fc5c65',
+          teamColor: '#fd9644',
+          socialColor: '#fed330',
+          socialTeamColor: '#26de81',
+          imageColor: '#2bcbba',
+          imageSocialTeamColor: '#45aaf2',
         },
       },
     },

@@ -1,23 +1,34 @@
 <template lang="pug">
   v-form(ref="form", v-if="content")
     v-row(tag="section")
+      v-col(cols="12")
+        v-card(outlined)
+          v-card-text
+            v-row
+              v-col(cols="12")
+                pole-form(@pole="addPole")
+              v-col(cols="12")
+                assos-form(@asso="addAsso")
       v-col(v-for="(part, key) in content.form", :key="key", cols="12")
         v-card(outlined)
           v-card-title.text-uppercase.primary--text {{ key }}
           v-card-text.pb-2
             template(v-for="(component, indice) in part")
-              v-text-field(v-if="isTextField(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
-              v-textarea(v-else-if="isTextArea(component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
-              color-form(v-else-if="isColor(component.type)", :key="indice", @color="updateColor")
-              team-form(v-else-if="isTeam(component.type)", v-model="component.fields.bureau", :key="indice")
-              social-form(v-else-if="isSocial(component.type)", v-model="component.fields", :key="indice").mt-4
+              v-text-field(v-if="is('text-field', component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
+              v-textarea(v-else-if="is('text-area', component.type)", :label="component.label", v-model="component.value", :key="indice", outlined)
+              color-form(v-else-if="is('color', component.type)", :key="indice", @color="addColor")
+              team-form(v-else-if="is('team', component.type)", v-model="component.fields.bureau", :key="indice").mt-4
+              social-form(v-else-if="is('social', component.type)", v-model="component.fields", :key="indice").mt-4
+              image-form(v-else-if="is('image', component.type)", :key="indice", :label="component.label", :fileName="component.fileName", @image="addImage").mt-4
     v-row
       v-col(cols="12", align="end")
-        v-btn(@click="validate()", depressed, color="primary") valider
+        v-btn(@click="validate()", depressed, color="primary", :disabled="loading") valider
 </template>
 
 <script>
+import base64toblob from 'base64toblob'
 import FileSaver from 'file-saver'
+import JSZip from 'jszip'
 
 export default {
   name: 'FormGenerator',
@@ -28,30 +39,50 @@ export default {
     },
   },
   data() {
-    return {}
+    return {
+      loading: false,
+      images: [],
+      pole: '',
+      asso: '',
+    }
   },
   methods: {
-    updateColor(v) {
+    addColor(v) {
       for (const value of this.content.form['front-matter']) {
         if (value.name === 'color') {
           value.value = v
         }
       }
     },
-    isTextField(v) {
-      return v === 'text-field'
+    addImage(v) {
+      this.images.push(v)
+      for (const value of this.content.form.body) {
+        if (value.type === 'image' && v.fileName === value.fileName) {
+          value.value = v
+        }
+      }
     },
-    isTextArea(v) {
-      return v === 'text-area'
+    addPole(v) {
+      this.pole = v
     },
-    isTeam(v) {
-      return v === 'team'
+    addAsso(v) {
+      this.asso = v
     },
-    isSocial(v) {
-      return v === 'social'
+    is(name, value) {
+      return value === name
     },
-    isColor(v) {
-      return v === 'color'
+    generateImage(zip) {
+      for (const image of this.images) {
+        const path = this.pole
+          ? this.asso
+            ? `assets/${this.pole}/${this.asso}`
+            : `assets/${this.pole}`
+          : 'assets'
+        zip.file(
+          `${path}/${image.fileName}.jpeg`,
+          base64toblob(image.base64.split(',')[1], 'image/jpeg')
+        )
+      }
     },
     generateSocial(content) {
       let social = 'social:\n'
@@ -90,15 +121,22 @@ export default {
     generateBody(content) {
       let body = ''
       for (const element of content) {
-        body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
+        if (element.type === 'image' && element.value) {
+          body += `<campus-center>\n  <campus-responsive-image folder-name="${
+            this.asso ? this.pole + '/' + this.asso : this.pole
+          }" name="${
+            element.fileName
+          }.jpeg" max-width="800"></campus-responsive-image>\n</campus-center>\n\n`
+        } else {
+          body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
+        }
       }
       return body
     },
-    generateFile(fileName, content) {
-      const blob = new Blob([content], {
+    generateFile(content) {
+      return new Blob([content], {
         type: 'text/plain;charset=utf-8',
       })
-      FileSaver.saveAs(blob, fileName)
     },
     validate() {
       const frontMatter = this.generateFrontMatter(
@@ -109,7 +147,20 @@ export default {
 
       const content = `${frontMatter}\n${body}`
 
-      this.generateFile('monFichierCampus.md', content)
+      const zip = new JSZip()
+
+      zip.file('index.md', this.generateFile(content))
+
+      this.generateImage(zip)
+
+      this.loading = true
+      this.$nuxt.$loading.start()
+      zip.generateAsync({ type: 'blob' }).then((content) => {
+        this.$emit('finish', true)
+        this.loading = false
+        this.$nuxt.$loading.finish()
+        FileSaver.saveAs(content, 'campus-insa.zip')
+      })
     },
   },
 }

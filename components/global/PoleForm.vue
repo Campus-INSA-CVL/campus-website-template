@@ -1,62 +1,62 @@
 <template lang="pug">
-  v-select(label="Choisir son pôle pour la couleur", :items="colors", :menu-props="{bottom: true, offsetY: true}", hide-details, outlined, dense, color="primary", item-color="primary", v-model="color")
+  v-select(label="Choisir sa provenance", :items="poles", :menu-props="{bottom: true, offsetY: true}", hide-details, outlined, dense, color="primary", item-color="primary", v-model="pole")
 </template>
 
 <script>
 export default {
-  name: 'ColorForm',
+  name: 'PoleForm',
   data() {
     return {
       value: '',
-      colors: [
+      poles: [
         {
           text: 'INSAPP',
-          value: 'primary',
+          value: 'federation/insapp',
         },
         {
           text: 'AIEP',
-          value: 'primary',
+          value: 'federation/aiep',
         },
         {
           text: 'Élus',
-          value: 'elusColor',
+          value: 'federation/elus',
         },
         {
           text: 'Pôle Culturel',
-          value: 'culturelColor',
+          value: 'federation/culturel',
         },
         {
           text: 'Pôle Sport',
-          value: 'sportColor',
+          value: 'federation/sports',
         },
         {
           text: 'Gala',
-          value: 'galaColor',
+          value: 'federation/gala',
         },
         {
           text: 'Pôle des Solidarités',
-          value: 'solidaritesColor',
+          value: 'federation/solidarites',
         },
         {
           text: 'Pôle Techniques',
-          value: 'techniquesColor',
+          value: 'federation/techniques',
         },
         {
           text: 'Les autres assos',
-          value: 'othersColor',
+          value: 'federation/les-autres-assos',
         },
         {
           text: 'Cafet',
-          value: 'cafetColor',
+          value: 'services',
         },
 
         {
           text: 'Partenariats',
-          value: 'partenariatsColor',
+          value: 'services',
         },
         {
           text: 'Shop',
-          value: 'shopColor',
+          value: 'services',
         },
         {
           text: 'Alumni',
@@ -64,27 +64,31 @@ export default {
         },
         {
           text: 'Documents',
-          value: 'documentsColor',
+          value: 'outils',
         },
         {
           text: 'Élèves',
-          value: 'elevesColor',
+          value: 'outils',
         },
         {
           text: 'Tutorinsa',
-          value: 'tutorinsaColor',
+          value: 'outils',
+        },
+        {
+          text: 'Olympiades',
+          value: 'olympiades',
         },
       ],
     }
   },
   computed: {
-    color: {
+    pole: {
       get() {
         return this.value
       },
       set(v) {
         this.value = v
-        this.$emit('color', v)
+        this.$emit('pole', v)
       },
     },
   },
