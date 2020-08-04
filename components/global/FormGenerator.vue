@@ -131,6 +131,7 @@ export default {
       this.loading = true
       this.$nuxt.$loading.start()
       zip.generateAsync({ type: 'blob' }).then((content) => {
+        this.$emit('finish', true)
         this.loading = false
         this.$nuxt.$loading.finish()
         FileSaver.saveAs(content, 'campus-insa.zip')
