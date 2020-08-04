@@ -37,6 +37,7 @@ export default {
   data() {
     return {
       images: [],
+      pole: '',
     }
   },
   methods: {
@@ -55,8 +56,9 @@ export default {
     },
     generateImage(zip) {
       for (const image of this.images) {
+        const path = this.pole ? `assets/${this.pole}` : 'assets'
         zip.file(
-          `assets/${image.fileName}.jpeg`,
+          `${path}/${image.fileName}.jpeg`,
           base64toblob(image.base64.split(',')[1], 'image/jpeg')
         )
       }
@@ -125,8 +127,6 @@ export default {
       zip.generateAsync({ type: 'blob' }).then(function (content) {
         FileSaver.saveAs(content, 'campus-insa.zip')
       })
-
-      // this.generateFile('monFichierCampus.md', content)
     },
   },
 }
