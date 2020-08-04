@@ -4,47 +4,47 @@ form:
   front-matter:
     - type: text-field
       name: title
-      label: nom de l'association
+      label: Nom de l'association
       value: ""
     - type: text-area
       name: description
-      label: description rapide de l'association
+      label: Description rapide de l'association
       value: ""
     - type: color
       name: color
-      label: nom de la couleur de l'association
+      label: Nom de la couleur de l'association
       value: ""
   body:
     - type: text-field
       md: "#"
       name: titre principale
-      label: titre de la présentation
+      label: Titre de la présentation
       value: ""
     - type: image
       name: image
       fileName: logo
-      label: image de l'association
+      label: Image de l'association
       value: ""
     - type: text-area
       md: ">"
       name: accroche
-      label: accroche succincte
+      label: Accroche succincte
       value: ""
     - type: text-field
       md: "##"
       name: présentation
-      label: titre pour la présentation
+      label: Titre pour la présentation
       value: ""
     - type: text-area
       name: texte de présentation
-      label: présentation de l'association
+      label: Présentation de l'association
       value: ""
     - type: text-field
       md: "##"
       name: objectifs
-      label: titre pour les objectifs
+      label: Titre pour les objectifs
       value: ""
     - type: text-area
       name: texte de de description des objectifs
-      label: présentation des objectifs de l'association
+      label: Présentation des objectifs de l'association
       value: ""
