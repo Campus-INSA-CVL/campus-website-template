@@ -7,9 +7,9 @@ order: 5
 
 # Bienvenue dans votre association
 
-<!-- <campus-center>
-  <campus-image folder-name="federation/bde" name="bde-blois.jpg" max-width="800"></campus-image>
-</campus-center> -->
+<campus-center>
+  <campus-responsive-image folder-name="img" name="logo.jpg" max-width="800"></campus-responsive-image>
+</campus-center>
 
 > Sed tempus tellus in neque tincidunt gravida. Integer suscipit sodales nisl, sit amet scelerisque nisi vestibulum ut. Aliquam facilisis purus at ligula mattis faucibus. Curabitur malesuada ipsum ligula, tristique gravida dui ullamcorper id.
 

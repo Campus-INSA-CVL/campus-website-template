@@ -8,14 +8,14 @@
 import Team from '@/components/campus/Team'
 import Social from '@/components/campus/Social'
 import Center from '@/components/campus/Center'
-import Image from '@/components/campus/Image'
+import ResponsiveImage from '@/components/campus/ResponsiveImage'
 
 export default {
   components: {
     CampusTeam: Team,
     CampusSocial: Social,
     CampusCenter: Center,
-    CampusImage: Image,
+    CampusResponsiveImage: ResponsiveImage,
   },
   async asyncData({ $content, route }) {
     const name = route.params.name

@@ -51,6 +51,11 @@ export default {
     },
     addImage(v) {
       this.images.push(v)
+      for (const value of this.content.form.body) {
+        if (value.type === 'image' && v.fileName === value.fileName) {
+          value.value = v
+        }
+      }
     },
     addPole(v) {
       this.pole = v
@@ -104,7 +109,13 @@ export default {
     generateBody(content) {
       let body = ''
       for (const element of content) {
-        body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
+        if (element.type === 'image' && element.value) {
+          body += `<campus-center>
+  <campus-image folder-name="federation/bde" name="bde-blois.jpg" max-width="800"></campus-image>
+</campus-center>`
+        } else {
+          body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
+        }
       }
       return body
     },
