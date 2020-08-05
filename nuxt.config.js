@@ -106,6 +106,7 @@ export default {
           socialTeamColor: '#26de81',
           imageColor: '#2bcbba',
           imageSocialTeamColor: '#45aaf2',
+          carouselColor: '#4b7bec',
         },
       },
     },
