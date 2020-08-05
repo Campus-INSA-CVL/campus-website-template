@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-select(label="Choisir son asso", :items="assos", :menu-props="{bottom: true, offsetY: true}", hide-details, outlined, dense, color="primary", item-color="primary", v-model="asso")
+  v-select(label="Choisir son asso", :items="assosSort", :menu-props="{bottom: true, offsetY: true}", hide-details, outlined, dense, color="primary", item-color="primary", v-model="asso")
 </template>
 
 <script>
@@ -125,6 +125,21 @@ export default {
     }
   },
   computed: {
+    assosSort() {
+      const assos = this.assos
+      return assos.sort((a, b) => {
+        const fa = a.text.toLowerCase()
+        const fb = b.text.toLowerCase()
+
+        if (fa < fb) {
+          return -1
+        }
+        if (fa > fb) {
+          return 1
+        }
+        return 0
+      })
+    },
     asso: {
       get() {
         return this.value
