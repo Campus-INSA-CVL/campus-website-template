@@ -13,8 +13,9 @@ export default {
   },
   data() {
     return {
-      scale: 70,
-      quality: 80,
+      width: 1000,
+      // scale: 70,
+      quality: 95,
       reader: null,
       img: null,
       canvas: null,
@@ -47,15 +48,18 @@ export default {
       this.resize(this.fileInfo.base64)
     },
     imageOnload() {
-      const scale = this.scale / 100
+      // const scale = this.scale / 100
+      const scale = this.width / this.img.width
       const quality = this.quality ? this.quality / 100 : 1
-      const width = this.img.width * scale
+      // const width = this.img.width * scale
       const height = this.img.height * scale
 
-      this.canvas.setAttribute('width', width)
+      // this.canvas.setAttribute('width', width)
+      this.canvas.setAttribute('width', this.width)
       this.canvas.setAttribute('height', height)
 
-      this.contextCanvas.drawImage(this.img, 0, 0, width, height)
+      // this.contextCanvas.drawImage(this.img, 0, 0, width, height)
+      this.contextCanvas.drawImage(this.img, 0, 0, this.width, height)
 
       const base64 = this.canvas.toDataURL('image/jpeg', quality)
 

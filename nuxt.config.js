@@ -1,3 +1,6 @@
+const base =
+  process.env.NODE_ENV === 'production' ? '/campus-website-templates/' : '/'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -13,8 +16,7 @@ export default {
     fallback: true,
   },
   router: {
-    base:
-      process.env.NODE_ENV === 'production' ? '/campus-website-templates/' : '',
+    base,
   },
   /*
    ** Headers of the page
@@ -36,7 +38,13 @@ export default {
           "Ce site permet aux associations de facilement générer le contenu pour leur page d'association du site campus de l'INSA Centre-Val de Loire",
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: base + 'favicon.ico',
+      },
+    ],
   },
   /*
    ** Global CSS
@@ -98,6 +106,7 @@ export default {
           socialTeamColor: '#26de81',
           imageColor: '#2bcbba',
           imageSocialTeamColor: '#45aaf2',
+          carouselColor: '#4b7bec',
         },
       },
     },

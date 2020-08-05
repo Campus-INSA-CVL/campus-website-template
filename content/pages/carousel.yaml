@@ -1,0 +1,68 @@
+title: carousel
+order: 7
+form:
+  front-matter:
+    - type: text-field
+      name: title
+      label: Nom de l'association
+      value: ""
+    - type: text-area
+      name: description
+      label: Description rapide de l'association
+      value: ""
+    - type: color
+      name: color
+      label: Nom de la couleur de l'association
+      value: ""
+    - type: text
+      name: carousel
+  body:
+    - type: text-field
+      md: "#"
+      name: titre principale
+      label: Titre de la présentation
+      value: ""
+    - type: text-area
+      md: ">"
+      name: accroche
+      label: Accroche succincte
+      value: ""
+    - type: text-field
+      md: "##"
+      name: présentation
+      label: Titre pour la présentation
+      value: ""
+    - type: text-area
+      name: texte de présentation
+      label: Présentation de l'association
+      value: ""
+    - type: carousel
+      name: carousel
+      fields:
+        - label: Image 1 pour le carousel
+          fileName: carousel-1
+          value: ""
+        - label: Image 2 pour le carousel
+          fileName: carousel-2
+          value: ""
+        - label: Image 3 pour le carousel
+          fileName: carousel-3
+          value: ""
+        - label: Image 4 pour le carousel
+          fileName: carousel-4
+          value: ""
+        - label: Image 5 pour le carousel
+          fileName: carousel-5
+          value: ""
+        - label: Image 6 pour le carousel
+          fileName: carousel-6
+          value: ""
+    - type: text-field
+      md: "##"
+      name: objectifs
+      label: Titre pour les objectifs
+      value: ""
+    - type: text-area
+      name: texte de de description des objectifs
+      label: Présentation des objectifs de l'association
+      value: ""
