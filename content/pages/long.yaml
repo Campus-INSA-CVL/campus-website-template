@@ -1,0 +1,119 @@
+title: long
+order: 12
+form:
+  front-matter:
+    - type: text-field
+      name: title
+      label: Nom de l'association
+      value: ""
+    - type: text-area
+      name: description
+      label: Description rapide de l'association
+      value: ""
+    - type: color
+      name: color
+      label: Nom de la couleur de l'association
+      value: ""
+  body:
+    - type: text-field
+      md: "#"
+      name: titre principale
+      label: Titre de la présentation
+      value: ""
+    - type: text-area
+      md: ">"
+      name: accroche
+      label: Accroche succincte
+      value: ""
+    - type: text-field
+      md: "##"
+      name: présentation
+      label: Titre pour la présentation
+      value: ""
+    - type: text-area
+      name: texte de présentation
+      label: Présentation de l'association
+      value: ""
+    - type: text-field
+      md: "##"
+      name: objectifs
+      label: Titre pour les objectifs
+      value: ""
+    - type: text-area
+      md: ">"
+      name: quotes
+      label: Accroche succincte des objectifs
+      value: ""
+    - type: text-field
+      md: "###"
+      name: objectifs
+      label: Sous-titre 1 pour les objectifs
+      value: ""
+    - type: text-area
+      name: texte de description des objectifs
+      label: Présentation des objectifs de l'association
+      value: ""
+    - type: text-field
+      md: "###"
+      name: objectifs
+      label: Sous-titre 2 pour les objectifs
+      value: ""
+    - type: text-area
+      name: texte de description des objectifs
+      label: Présentation des objectifs de l'association
+      value: ""
+    - type: text-field
+      md: "##"
+      name: évènements
+      label: Titre pour les évènements
+      value: ""
+    - type: text-area
+      md: ">"
+      name: quotes
+      label: Accroche succincte des évènements
+      value: ""
+    - type: text-field
+      md: "###"
+      name: évènements
+      label: Sous-titre 1 pour les évènements
+      value: ""
+    - type: text-area
+      name: texte de description des évènements
+      label: Présentation des évènements de l'association
+      value: ""
+    - type: text-field
+      md: "###"
+      name: évènements
+      label: Sous-titre 2 pour les évènements
+      value: ""
+    - type: text-area
+      name: texte de description des évènements
+      label: Présentation des évènements de l'association
+      value: ""
+    - type: text-field
+      md: "###"
+      name: évènements
+      label: Sous-titre 3 pour les évènements
+      value: ""
+    - type: text-area
+      name: texte de description des évènements
+      label: Présentation des évènements de l'association
+      value: ""
+    - type: text-field
+      md: "###"
+      name: évènements
+      label: Sous-titre 4 pour les évènements
+      value: ""
+    - type: text-area
+      name: texte de description des évènements
+      label: Présentation des évènements de l'association
+      value: ""
+    - type: text-field
+      md: "##"
+      name: expression
+      label: Titre pour vous exprimer
+      value: ""
+    - type: text-area
+      name: texte d'expression
+      label: Expression libre
+      value: ""

@@ -1,0 +1,137 @@
+title: carousel-social-team
+order: 9
+form:
+  front-matter:
+    - type: text-field
+      name: title
+      label: Nom de l'association
+      value: ""
+    - type: text-area
+      name: description
+      label: Description rapide de l'association
+      value: ""
+    - type: color
+      name: color
+      label: Nom de la couleur de l'association
+      value: ""
+    - type: text
+      name: carousel
+    - type: team
+      name: team
+      fields:
+        bureau:
+          - type: text-field
+            responsability: président
+            name: name
+            label: Nom du président
+            value: ""
+          - type: text-field
+            responsability: vice-président
+            name: name
+            label: Nom du vice-président
+            value: ""
+          - type: text-field
+            responsability: trésorier
+            name: name
+            label: Nom du trésorier
+            value: ""
+          - type: text-field
+            responsability: secrétaire
+            name: name
+            label: Nom du secrétaire
+            value: ""
+    - type: social
+      name: social
+      fields:
+        - type: text-field
+          name: facebook
+          label: Lien vers facebook
+          value: ""
+        - type: text-field
+          name: instagram
+          label: Lien vers instagram
+          value: ""
+        - type: text-field
+          name: twitter
+          label: Lien vers twitter
+          value: ""
+        - type: text-field
+          name: twitch
+          label: Lien vers twitch
+          value: ""
+        - type: text-field
+          name: snapchat
+          label: Lien vers snapchat
+          value: ""
+        - type: text-field
+          name: discord
+          label: Lien vers discord
+          value: ""
+  body:
+    - type: text-field
+      md: "#"
+      name: titre principale
+      label: Titre de la présentation
+      value: ""
+    - type: text-area
+      md: ">"
+      name: accroche
+      label: Accroche succincte
+      value: ""
+    - type: text-field
+      md: "##"
+      name: présentation
+      label: Titre pour la présentation
+      value: ""
+    - type: text-area
+      name: texte de présentation
+      label: Présentation de l'association
+      value: ""
+    - type: carousel
+      name: carousel
+      fields:
+        - label: Image 1 pour le carousel
+          fileName: carousel-1
+          value: ""
+        - label: Image 2 pour le carousel
+          fileName: carousel-2
+          value: ""
+        - label: Image 3 pour le carousel
+          fileName: carousel-3
+          value: ""
+        - label: Image 4 pour le carousel
+          fileName: carousel-4
+          value: ""
+        - label: Image 5 pour le carousel
+          fileName: carousel-5
+          value: ""
+        - label: Image 6 pour le carousel
+          fileName: carousel-6
+          value: ""
+    - type: text-field
+      md: "##"
+      name: objectifs
+      label: Titre pour les objectifs
+      value: ""
+    - type: text-area
+      name: texte de de description des objectifs
+      label: Présentation des objectifs de l'association
+      value: ""
+    - type: divider
+      value: "---"
+    - type: text-field
+      md: "##"
+      name: réseaux sociaux
+      label: Titre pour les réseaux sociaux
+      value: ""
+    - type: component
+      value: <campus-social :social="social" :color="color"></campus-social>
+    - type: divider
+      value: "---"
+    - type: text-field
+      md: "##"
+      name: équipe
+      label: Titre pour l'équipe
+      value: ""
+    - type: component
+      value: <campus-team :team="team" :color="color"></campus-team>
