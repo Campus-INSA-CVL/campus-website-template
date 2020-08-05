@@ -20,6 +20,7 @@
               team-form(v-else-if="is('team', component.type)", v-model="component.fields.bureau", :key="indice").mt-4
               social-form(v-else-if="is('social', component.type)", v-model="component.fields", :key="indice").mt-4
               image-form(v-else-if="is('image', component.type)", :key="indice", :label="component.label", :fileName="component.fileName", @image="addImage").mt-4
+              carousel-form(v-else-if="is('carousel', component.type)", :key="indice", :fields="component.fields", @carousel="addCarousel").mt-4
     v-row
       v-col(cols="12", align="end")
         v-btn(@click="validate()", depressed, color="primary", :disabled="loading") valider
@@ -61,6 +62,9 @@ export default {
           value.value = v
         }
       }
+    },
+    addCarousel(v) {
+      this.images.push(v)
     },
     addPole(v) {
       this.pole = v
@@ -111,6 +115,15 @@ export default {
           frontMatter += this.generateTeam(element.fields)
         } else if (element.name === 'social') {
           frontMatter += this.generateSocial(element.fields)
+        } else if (element.name === 'carousel') {
+          const carouselImages = this.images.filter((v) =>
+            v.fileName.match(/^carousel-\d/)
+          )
+          const nameImages = carouselImages.map((v) => v.fileName)
+          frontMatter += 'imagesName:\n'
+          for (const name of nameImages) {
+            frontMatter += `  - ${name}.jpeg\n`
+          }
         } else {
           frontMatter += `${element.name}: ${element.value}\n`
         }
@@ -127,6 +140,10 @@ export default {
           }" name="${
             element.fileName
           }.jpeg" max-width="800"></campus-responsive-image>\n</campus-center>\n\n`
+        } else if (element.type === 'carousel') {
+          body += `<campus-center>\n  <campus-carousel :names="imagesName" folder-name="${
+            this.asso ? this.pole + '/' + this.asso : this.pole
+          }"></campus-carousel>\n</campus-center>\n\n`
         } else {
           body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
         }
