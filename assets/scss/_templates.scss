@@ -4,7 +4,8 @@ $template: 'baseColor' --v-baseColor-, 'teamColor' --v-teamColor-,
   'imageColor' --v-imageColor-, 'imageSocialTeamColor' --v-imageSocialTeamColor-,
   'carouselColor' --v-carouselColor-, 'carouselTeamColor' --v-carouselTeamColor-,
   'carouselSocialTeamColor' --v-carouselSocialTeamColor-,
-  'carouselImageSocialTeamColor' --v-carouselImageSocialTeamColor-;
+  'carouselImageSocialTeamColor' --v-carouselImageSocialTeamColor-,
+  'imagesColor' --v-imagesColor-, 'longColor' --v-longColor-;
 
 @each $name, $color in $template {
   ##{$name}.nuxt-content {
