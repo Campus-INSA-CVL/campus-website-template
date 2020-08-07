@@ -1,0 +1,90 @@
+title: expansion
+order: 13
+form:
+  front-matter:
+    - type: text-field
+      name: title
+      label: Nom de l'association
+      value: ""
+    - type: text-area
+      name: description
+      label: Description rapide de l'association
+      value: ""
+    - type: color
+      name: color
+      label: Nom de la couleur de l'association
+      value: ""
+    - type: expansion
+      name: expansion
+      fields:
+        - type: text-field
+          name: titre 1
+          label: Titre du panneau 1
+          value: ""
+        - type: text-area
+          name: contenu 1
+          label: Contenu du panneau 1
+          value: ""
+        - type: text-field
+          name: titre 2
+          label: Titre du panneau 2
+          value: ""
+        - type: text-area
+          name: contenu 2
+          label: Contenu du panneau 2
+          value: ""
+        - type: text-field
+          name: titre 3
+          label: Titre du panneau 3
+          value: ""
+        - type: text-area
+          name: contenu 3
+          label: Contenu du panneau 3
+          value: ""
+        - type: text-field
+          name: titre 4
+          label: Titre du panneau 4
+          value: ""
+        - type: text-area
+          name: contenu 4
+          label: Contenu du panneau 4
+          value: ""
+        - type: text-field
+          name: titre 5
+          label: Titre du panneau 5
+          value: ""
+        - type: text-area
+          name: contenu 5
+          label: Contenu du panneau 5
+          value: ""
+  body:
+    - type: text-field
+      md: "#"
+      name: titre principale
+      label: Titre de la présentation
+      value: ""
+    - type: text-area
+      md: ">"
+      name: accroche
+      label: Accroche succincte
+      value: ""
+    - type: text-field
+      md: "##"
+      name: présentation
+      label: Titre pour la présentation
+      value: ""
+    - type: text-area
+      name: texte de présentation
+      label: Présentation de l'association
+      value: ""
+    - type: expansion
+      name: expansion
+    - type: text-field
+      md: "##"
+      name: objectifs
+      label: Titre pour les objectifs
+      value: ""
+    - type: text-area
+      name: texte de de description des objectifs
+      label: Présentation des objectifs de l'association
+      value: ""
