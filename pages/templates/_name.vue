@@ -10,6 +10,7 @@ import Social from '@/components/campus/Social'
 import Center from '@/components/campus/Center'
 import ResponsiveImage from '@/components/campus/ResponsiveImage'
 import Carousel from '@/components/campus/Carousel'
+import ExpansionPanels from '@/components/campus/ExpansionPanels'
 
 export default {
   components: {
@@ -18,6 +19,7 @@ export default {
     CampusCenter: Center,
     CampusResponsiveImage: ResponsiveImage,
     CampusCarousel: Carousel,
+    CampusExpansionPanels: ExpansionPanels,
   },
   async asyncData({ $content, route }) {
     const name = route.params.name
