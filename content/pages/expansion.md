@@ -8,6 +8,8 @@ expansion:
     content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus, ante in sagittis iaculis, nulla dui finibus tellus, aliquam euismod libero urna eu enim. Praesent non aliquam mauris, eget tincidunt mauris. Vestibulum augue quam, rutrum eu pretium in, accumsan quis augue. Morbi velit ante, varius ac mauris eget, pellentesque porttitor mauris.
   - title: Lorem ipsum
     content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus, ante in sagittis iaculis, nulla dui finibus tellus, aliquam euismod libero urna eu enim. Praesent non aliquam mauris, eget tincidunt mauris. Vestibulum augue quam, rutrum eu pretium in, accumsan quis augue. Morbi velit ante, varius ac mauris eget, pellentesque porttitor mauris.
+  - title:
+    content:
 ---
 
 # Bienvenue dans votre association
