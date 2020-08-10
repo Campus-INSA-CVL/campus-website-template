@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@mdi/js": "^5.4.55",
-    "@nuxt/content": "^1.5.3",
+    "@nuxt/content": "^1.6.0",
     "base64toblob": "0.0.2",
     "file-saver": "^2.0.2",
     "jszip": "^3.5.0",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/tailwindcss": "^2.1.1",
+    "@nuxtjs/tailwindcss": "^3.0.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "@tailwindcss/typography": "^0.2.0",
     "babel-eslint": "^10.1.0",
@@ -45,6 +45,6 @@
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.3.1"
+    "sass-loader": "^9.0.3"
   }
 }
