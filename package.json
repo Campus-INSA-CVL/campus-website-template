@@ -21,8 +21,8 @@
     }
   },
   "dependencies": {
-    "@mdi/js": "^5.4.55",
-    "@nuxt/content": "^1.5.3",
+    "@mdi/js": "^5.5.55",
+    "@nuxt/content": "^1.6.0",
     "base64toblob": "0.0.2",
     "file-saver": "^2.0.2",
     "jszip": "^3.5.0",

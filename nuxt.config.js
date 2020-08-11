@@ -112,6 +112,7 @@ export default {
           carouselImageSocialTeamColor: '#778ca3',
           imagesColor: '#f9ca24',
           longColor: '#f0932b',
+          expansionColor: '#eb4d4b',
         },
       },
     },

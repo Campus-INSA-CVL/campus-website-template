@@ -21,6 +21,7 @@
               social-form(v-else-if="is('social', component.type)", v-model="component.fields", :key="indice").mt-4
               image-form(v-else-if="is('image', component.type)", :key="indice", :label="component.label", :fileName="component.fileName", @image="addImage").mt-4
               carousel-form(v-else-if="is('carousel', component.type)", :key="indice", :fields="component.fields", @carousel="addCarousel").mt-4
+              expansion-form(v-else-if="is('expansion', component.type)", :key="indice", v-model="component.fields").mt-4
     v-row
       v-col(cols="12", align="end")
         v-btn(@click="validate()", depressed, color="primary", :disabled="loading") valider
@@ -107,6 +108,29 @@ export default {
       }
       return team
     },
+    generateCarousel() {
+      let frontMatter = ''
+      const carouselImages = this.images.filter((v) =>
+        v.fileName.match(/^carousel-\d/)
+      )
+      const nameImages = carouselImages.map((v) => v.fileName)
+      frontMatter += 'imagesName:\n'
+      for (const name of nameImages) {
+        frontMatter += `  - ${name}.jpeg\n`
+      }
+      return frontMatter
+    },
+    generateExpansion(content) {
+      let frontMatter = 'expansion:\n'
+      for (const item of content) {
+        if (item.name.match('titre')) {
+          frontMatter += `  - title: ${item.value}\n`
+        } else if (item.name.match('contenu')) {
+          frontMatter += `    content: ${item.value}\n`
+        }
+      }
+      return frontMatter
+    },
     generateFrontMatter(content) {
       let frontMatter = ``
       frontMatter += '---\n'
@@ -116,14 +140,9 @@ export default {
         } else if (element.name === 'social') {
           frontMatter += this.generateSocial(element.fields)
         } else if (element.name === 'carousel') {
-          const carouselImages = this.images.filter((v) =>
-            v.fileName.match(/^carousel-\d/)
-          )
-          const nameImages = carouselImages.map((v) => v.fileName)
-          frontMatter += 'imagesName:\n'
-          for (const name of nameImages) {
-            frontMatter += `  - ${name}.jpeg\n`
-          }
+          frontMatter += this.generateCarousel()
+        } else if (element.name === 'expansion') {
+          frontMatter += this.generateExpansion(element.fields)
         } else {
           frontMatter += `${element.name}: ${element.value}\n`
         }
@@ -144,6 +163,9 @@ export default {
           body += `<campus-center>\n  <campus-carousel :names="imagesName" folder-name="${
             this.asso ? this.pole + '/' + this.asso : this.pole
           }"></campus-carousel>\n</campus-center>\n\n`
+        } else if (element.type === 'expansion') {
+          body +=
+            '<campus-expansion-panels :color="color" :expansion="expansion"></campus-expansion-panels>\n\n'
         } else {
           body += `${element.md ? element.md + ' ' : ''}${element.value}\n\n`
         }
