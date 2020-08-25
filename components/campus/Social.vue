@@ -1,7 +1,12 @@
 <template lang="pug">
   v-row(justify="space-around")
     v-col(v-for="key in keys", :key="key", align="center", v-if="social[key]")
-      v-btn(icon, :href="social[key]", target="_blank", :class='`${color}--text`', x-large)
+      v-tooltip(bottom, v-if="key === 'snapchat'")
+        template(v-slot:activator="{ on, attrs}")
+          v-btn(icon, :class='`${color}--text`', x-large, v-on="on", v-bind="attrs")
+            v-icon(large) {{ svg[key] }}
+        span {{ social[key] }}
+      v-btn(icon, :href="social[key]", target="_blank", :class='`${color}--text`', x-large, v-else)
         v-icon(large) {{ svg[key] }}
 </template>
 
