@@ -41,6 +41,10 @@ form:
           name: discord
           label: Lien vers discord
           value: ""
+        - type: text-field
+          name: linkedin
+          label: Lien vers linkedin
+          value: ""
     - type: team
       name: team
       fields:

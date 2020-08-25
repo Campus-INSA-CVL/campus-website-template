@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.{js,vue}": "npm run lint:js",
-    "content/**": "npm run lint:md"
+    "content/**/*.md": "npm run lint:md"
   },
   "husky": {
     "hooks": {

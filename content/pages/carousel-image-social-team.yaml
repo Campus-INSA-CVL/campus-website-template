@@ -67,6 +67,10 @@ form:
           name: discord
           label: Lien vers discord
           value: ""
+        - type: text-field
+          name: linkedin
+          label: Lien vers linkedin
+          value: ""
   body:
     - type: text-field
       md: "#"

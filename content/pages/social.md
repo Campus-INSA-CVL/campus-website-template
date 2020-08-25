@@ -12,6 +12,7 @@ social:
   twitch: 'https://twitch.com'
   snapchat: 'https://snapchat.com'
   # discord: 'https://discord.com'
+  linkedin: 'https://linkedin.com'
 ---
 
 # Bienvenue dans votre association
