@@ -13,6 +13,7 @@ import {
   mdiTwitch,
   mdiSnapchat,
   mdiDiscord,
+  mdiLinkedin,
 } from '@mdi/js'
 
 export default {
@@ -33,6 +34,7 @@ export default {
         twitch: mdiTwitch,
         snapchat: mdiSnapchat,
         discord: mdiDiscord,
+        linkedin: mdiLinkedin,
       },
     }
   },
