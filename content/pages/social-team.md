@@ -26,7 +26,7 @@ social:
   instagram: 'https://instagram.com'
   twitter: 'https://twitter.com'
   # twitch: 'https://twitch.com'
-  snapchat: 'https://snapchat.com'
+  snapchat: 'snapchat'
   discord: 'https://discord.com'
   linkedin: 'https://linkedin.com'
 ---

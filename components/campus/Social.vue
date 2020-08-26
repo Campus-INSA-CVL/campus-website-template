@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row(justify="space-around")
     v-col(v-for="key in keys", :key="key", align="center", v-if="social[key]")
-      v-tooltip(bottom, v-if="key === 'snapchat'")
+      v-tooltip(bottom, v-if="key === 'snapchat' && !isURL(social[key])")
         template(v-slot:activator="{ on, attrs}")
           v-btn(icon, :class='`${color}--text`', x-large, v-on="on", v-bind="attrs")
             v-icon(large) {{ svg[key] }}
@@ -49,6 +49,11 @@ export default {
     },
     color() {
       return this.$attrs.color ?? 'primary'
+    },
+  },
+  methods: {
+    isURL(link) {
+      return link.match(/(https|www|\.com)/g)
     },
   },
 }
