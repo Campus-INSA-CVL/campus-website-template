@@ -9,7 +9,7 @@
       v-col(cols="12", md="10", lg="8", offset-md="1", offset-lg="2")
         v-row(justify="center")
           v-col(cols="12", sm="6", lg="6", v-for="(layout, index) in content", :key="index")
-            campus-card(:content="layout")
+            preview-card(:content="layout")
 
     v-row(tag="section", justify="center")
       v-col(cols="12", md="10", lg="8")
