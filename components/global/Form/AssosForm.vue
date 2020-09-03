@@ -15,11 +15,11 @@ export default {
         },
         {
           text: "Comed'INSA",
-          value: 'comedinsa',
+          value: 'comed-insa',
         },
         {
-          text: 'INSAbrasse',
-          value: 'insabrasse',
+          text: "INSA'brasse",
+          value: 'insa-brasse',
         },
         {
           text: 'INSAction',
@@ -27,11 +27,11 @@ export default {
         },
         {
           text: "INS'Agora",
-          value: 'insagora',
+          value: 'insa-gora',
         },
         {
           text: "INSA'press",
-          value: 'insapress',
+          value: 'insa-press',
         },
         {
           text: 'INSArpège',
@@ -39,7 +39,7 @@ export default {
         },
         {
           text: "Jard'INSA",
-          value: 'jardinsa',
+          value: 'jard-insa',
         },
         {
           text: 'Printemps des Grandes Écoles',
@@ -47,11 +47,11 @@ export default {
         },
         {
           text: "Gree'NSA Blois",
-          value: 'greensa-blois',
+          value: 'gree-nsa-blois',
         },
         {
           text: "Gree'NSA Bourges",
-          value: 'greensa-bourges',
+          value: 'gree-nsa-bourges',
         },
         {
           text: 'Insagénieuse',
@@ -59,7 +59,7 @@ export default {
         },
         {
           text: 'INSA Safety',
-          value: 'insasafety',
+          value: 'insa-safety',
         },
         {
           text: '5 Continents 5 Sommets',
@@ -79,7 +79,7 @@ export default {
         },
         {
           text: "INS'Actif",
-          value: 'insactif',
+          value: 'ins-actif',
         },
         {
           text: 'R3: Rencontrer, Réaliser, Réussir',
@@ -114,12 +114,8 @@ export default {
           value: 'isi',
         },
         {
-          text: 'mécanique automobile',
-          value: 'mecanique-automobile',
-        },
-        {
-          text: "Rac'INSA",
-          value: 'racinsa',
+          text: "insa'roule",
+          value: 'insa-roule',
         },
       ],
     }
