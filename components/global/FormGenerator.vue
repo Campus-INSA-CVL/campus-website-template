@@ -158,7 +158,7 @@ export default {
             this.asso ? this.pole + '/' + this.asso : this.pole
           }" name="${
             element.fileName
-          }.jpeg" max-width="800"></campus-responsive-image>\n</campus-center>\n\n`
+          }.jpeg" max-width="400"></campus-responsive-image>\n</campus-center>\n\n`
         } else if (element.type === 'carousel') {
           body += `<campus-center>\n  <campus-carousel :names="imagesName" folder-name="${
             this.asso ? this.pole + '/' + this.asso : this.pole
