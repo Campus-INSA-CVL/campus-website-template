@@ -23,7 +23,7 @@
     }
   },
   "dependencies": {
-    "@mdi/js": "^5.7.55",
+    "@mdi/js": "^5.8.55",
     "@nuxt/content": "^1.10.0",
     "base64toblob": "0.0.2",
     "file-saver": "^2.0.2",
@@ -31,14 +31,14 @@
     "nuxt": "^2.14.7"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config": "^4.0.0",
     "@nuxtjs/eslint-module": "^3.0.0",
-    "@nuxtjs/tailwindcss": "^3.1.0",
+    "@nuxtjs/tailwindcss": "^3.2.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "@tailwindcss/typography": "^0.2.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.13.0",
+    "eslint": "^7.12.0",
+    "eslint-config-prettier": "^6.14.0",
     "eslint-plugin-md": "^1.0.19",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -51,6 +51,6 @@
     "remark-frontmatter": "^3.0.0",
     "remark-preset-lint-markdown-style-guide": "^4.0.0",
     "remark-preset-lint-recommended": "^5.0.0",
-    "sass-loader": "^10.0.3"
+    "sass-loader": "^10.0.4"
   }
 }
